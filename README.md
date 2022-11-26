@@ -16,9 +16,11 @@ sh start.sh
 create file .env
 with such parameters
 
+```
 INFURA_PROJECT_ID=
 PRIVATE_KEY=
 WEB3STORAGE_TOKEN=
+```
 
 - Add one of your wallets' private key, your own [Infura](https://infura.io/) project ID and a [Web3.Storage](https://web3.storage/tokens/) API token in a `.env` file
 - Make sure you have a handful of Goerli ETH in this wallet
@@ -31,12 +33,14 @@ yarn hardhat deploy-zksync
 
 
 Estmate gas for all contracts
+```
 npx hardhat deploy-zksync --script deploy/deploy-estimate-gas.ts 
-
+```
 
 Deploy NFT contract
+```
 npx hardhat deploy-zksync --script deploy/deploy-nft.ts 
-
+```
 Main features: Mint and Fee mint nft
 
 onlyOwner:
@@ -48,15 +52,17 @@ Anyone:
 
 
 Deploy NFT simple contract, consumes less gas
+```
 npx hardhat deploy-zksync --script deploy/deploy-nft-simple.ts
-
+```
 Main features: 
 - NO Owner !!!
 - safeMint(address to, uint256 tokenId)
 
 Deploy ERC20  contract
+```
 npx hardhat deploy-zksync --script deploy/deploy-erc20.ts  
-
+```
 Main features:
 - Mint own token
 - Send ETH or any other ERC20 tokens to the contract, and whitelist members can take tokens from contract
@@ -85,26 +91,27 @@ Anyone:
 
 
 Deploy ERC20 Simple contract, consumes less gas
-
+```
 npx hardhat deploy-zksync --script deploy/deploy-erc20.ts  
+```
 
 OnlyOwner:
 - mint(address to, uint256 amount)
 
 
 Deploy Simple contract, consumes less gas
-
+```
 npx hardhat deploy-zksync --script deploy/deploy-simple.ts  
+```
 
 Anyone:
 - setSimpleGreat(string memory _greeting)
 
 
-
 Deploy Disperse contract
-
+```
 npx hardhat deploy-zksync --script deploy/deploy-simple.ts  
-
+```
 see https://disperse.app/
 
 
